@@ -12,6 +12,16 @@ public class Space {
     }
 
 
+
+    public void setNumActual(Integer numActual) {
+        if(fixed)return;
+        this.numActual = numActual;
+    }
+
+    public void clearSpace(){
+        setNumActual(null);
+    }
+
     private void checkNumberFixed(int numExpect){
         this.numActual=numExpect;
     }
@@ -20,11 +30,11 @@ public class Space {
         return numActual;
     }
 
-    public Integer getNumExpect() {
+    public Integer getExpect() {
         return numExpect;
     }
 
-    public Boolean getFixed() {
+    public Boolean isFixed() {
         return fixed;
     }
 }
